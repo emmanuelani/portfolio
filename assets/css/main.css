@@ -3937,3 +3937,35 @@ body.is-preload #header.alt .logo {
 	}
 
 }
+
+/* nav bar */
+.menu-bar {
+	list-style-type: none;
+	/* Remove bullets */
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	/* Background color of the menu */
+}
+
+.menu-bar li {
+	float: left;
+	/* Align menu items horizontally */
+}
+
+.menu-bar li a {
+	display: block;
+	color: white;
+	/* Text color */
+	text-align: center;
+	padding: 14px 16px;
+	/* Padding around the text */
+	text-decoration: none;
+	/* Remove underline from links */
+}
+
+.menu-bar li a:hover {
+	background-color: #111;
+	/* Change background color on hover */
+}
