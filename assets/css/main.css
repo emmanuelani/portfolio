@@ -3950,7 +3950,7 @@ body.is-preload #header.alt .logo {
 }
 
 .menu-bar li {
-	float: left;
+	float: right;
 	/* Align menu items horizontally */
 }
 
