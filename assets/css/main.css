@@ -4025,7 +4025,7 @@ body {
 	}
 
 	.menu-bar.active {
-		display: flex;
+		display: none;
 		/* Keep showing menu items on larger screens */
 	}
 
@@ -4034,8 +4034,8 @@ body {
 		/* Adjust padding */
 	}
 
-	.hamburger {
-		display: none;
-		/* Hide hamburger menu on larger screens */
-	}
+	/* .hamburger {
+		display: none; */
+	/* Hide hamburger menu on larger screens */
+}
 }
