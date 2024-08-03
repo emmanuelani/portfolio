@@ -3946,19 +3946,25 @@ body {
 
 .navbar {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
+	/* Align items to the right */
 	align-items: center;
 	background-color: #333;
 	padding: 10px;
 }
 
+.nav-right {
+	display: flex;
+	align-items: center;
+}
+
 .hamburger {
-	display: none;
-	/* Hide by default */
 	cursor: pointer;
 	flex-direction: column;
 	justify-content: space-around;
 	height: 24px;
+	margin-left: auto;
+	/* Push hamburger menu to the right */
 }
 
 .line {
@@ -3972,7 +3978,21 @@ body {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	display: none;
+	/* Hide menu items by default */
+	flex-direction: column;
+	width: 100%;
+	background-color: #333;
+	position: absolute;
+	top: 50px;
+	/* Position below navbar */
+	right: 0;
+	/* Align to the right */
+}
+
+.menu-bar.active {
 	display: flex;
+	/* Show menu items when active */
 }
 
 .menu-bar li {
@@ -3992,30 +4012,30 @@ body {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-	.hamburger {
-		display: flex;
-		/* Show hamburger menu */
-	}
-
+@media (min-width: 768px) {
 	.menu-bar {
-		display: none;
-		/* Hide menu items by default */
-		flex-direction: column;
-		width: 100%;
-		background-color: #333;
-		position: absolute;
-		top: 50px;
-		/* Position below navbar */
-		left: 0;
+		display: flex;
+		/* Show menu items in a row on larger screens */
+		flex-direction: row;
+		position: static;
+		/* Reset position */
+		width: auto;
+		background-color: transparent;
+		/* Reset background color */
 	}
 
 	.menu-bar.active {
 		display: flex;
-		/* Show menu items when active */
+		/* Keep showing menu items on larger screens */
 	}
 
 	.menu-bar li a {
-		padding: 15px;
+		padding: 10px 15px;
+		/* Adjust padding */
+	}
+
+	.hamburger {
+		display: none;
+		/* Hide hamburger menu on larger screens */
 	}
 }
