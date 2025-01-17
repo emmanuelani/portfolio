@@ -3991,7 +3991,7 @@ body {
 }
 
 .menu-bar.active {
-	display: flex;
+	display: none;
 	/* Show menu items when active */
 }
 
@@ -4038,4 +4038,12 @@ body {
 		display: none; */
 	/* Hide hamburger menu on larger screens */
 	/* } */
+}
+
+/* #nav {
+	display: none;
+} */
+
+.menu-bar {
+	display: none;
 }
